@@ -155,7 +155,7 @@ def event_customized_probability_slider():
 def event_search():
     st.session_state['number_search'] += 1 
     # st.session_state['search_content'].append({'type': query_search ,'query': query})
-    st.session_state['time_series'].append({'search': datetime.datetime.now().timestamp(), 'query': st.session_state.query})
+    st.session_state['time_series'].append({'search': datetime.datetime.now().timestamp()})
 
 ## initiate feature state
 st.session_state.verifiable = True
