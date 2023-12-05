@@ -155,7 +155,7 @@ def event_customized_probability_slider():
 def event_search():
     st.session_state['number_search'] += 1 
     # st.session_state['search_content'].append({'type': query_search ,'query': query})
-    st.session_state['time_series'].append({'search': datetime.datetime.now().timestamp()})
+    st.session_state['time_series'].append({'search': datetime.datetime.now().timestamp(), "query": query})
 
 ## initiate feature state
 st.session_state.verifiable = True
@@ -254,7 +254,7 @@ query_search = 'similarity'
 #     search_wikipedia,
 #     key="wiki_searchbox"
 # )
-query = st.text_input("search:", label_visibility="collapsed", placeholder="Search claims", on_change=event_search)
+query = st.text_input("search:", key="query", label_visibility="collapsed", placeholder="Search claims", on_change=event_search)
 
 ## sidebar
 with st.sidebar:
